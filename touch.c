@@ -1,13 +1,13 @@
-#include "types.h"
 #include "stat.h"
 #include "user.h"
 #include "fcntl.h"
+#include "types.h"
 
 int
 main(int argc, char *argv[])
 {
 	if (argc <2) {
-		printf(1, "input [touch file_name1 file_name2 ...]\n");
+		printf(1, "masukkan [touch file_name1 file_name2 ...]\n");
 	}
 
 	int i, count = 0;
@@ -22,7 +22,7 @@ main(int argc, char *argv[])
 		close(a);
 	}
 
-	printf(1, "%d file(s) created, %d file(s) skiped.\n", count, argc - 1 - count);
+	printf(1, "%d file(s) terbuat, %d file(s) terlewati.\n", count, argc - 1 - count);
 
 	exit();
 }
