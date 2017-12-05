@@ -3,16 +3,19 @@
 #include "user.h"
 #include "fcntl.h"
 
-
 int
 main(int argc, char *argv[])
 {
+    
+
 	if (argc ==0 ) {
-		chdir("/home");
+		if(chdir("/home")<0) printf(1,"error");
 	}
 
 	else {
-	chdir(*argv);
+	
+	
+	if(chdir(*argv)<0)printf(1,"error");
 	}
 
 	
